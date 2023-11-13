@@ -9,6 +9,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 ```
 
+## Uninstall
+```bash
+rustup self uninstall
+```
+
 ## Single File Compilation
 ```bash
 rustc filename.rs
@@ -19,3 +24,4 @@ rustc filename.rs
 cargo build
 cargo run
 ```
+
