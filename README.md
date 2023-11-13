@@ -24,3 +24,8 @@ rustc filename.rs
 cargo build
 cargo run
 ```
+
+- `cargo run` result example
+
+<img width="471" alt="image" src="https://github.com/Nhahan/rust/assets/81916648/dd6b7be6-ea47-4d8c-a398-3ea3c47dadf7">
+>>>>>>> b51ce8fa34dfb8250e2640cdeb891f5e6e5101fa
