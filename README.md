@@ -24,4 +24,3 @@ rustc filename.rs
 cargo build
 cargo run
 ```
-
