@@ -100,3 +100,10 @@ println!("x의 값은 {x}입니다."); // 4
 let x = 3.14; // f64
 let y: f32 = 3.14; // f32
 ```
+
+### 불린 boolean 타입
+
+```rust
+let t = true;
+let f: bool = false;
+```
