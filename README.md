@@ -47,3 +47,16 @@ fn main() {
     println!("PI 상수값은 {PI}입니다.")
 }
 ```
+
+#### shadowing
+```rust
+let x = 3;
+println!("x의 값은 {x}입니다."); // 3
+let x = x + 1;
+println!("x의 값은 {x}입니다."); // 4
+{
+    let x = x * 2;
+    println!("x의 값은 {x}입니다."); // 8 
+}
+println!("x의 값은 {x}입니다."); // 4
+```
