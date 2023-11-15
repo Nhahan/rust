@@ -122,5 +122,9 @@ let z: char = '가';
 ```rust
 fn main() {
     let t: (i32, bool, f64) = (32, true, 3.14);
+
+    let (x, y, z) = t; // 튜플 구조분해 tuple destructuring
+    
+    println!("x, y, z = {x}, {y}, {z}"); // x=32, y=true, z=3.14
 }
 ```
