@@ -107,3 +107,20 @@ let y: f32 = 3.14; // f32
 let t = true;
 let f: bool = false;
 ```
+
+### char 타입
+
+```rust
+let c = 'A';
+let z: char = '가';
+```
+
+## Compound 타입
+
+### 튜플 tuple 타입
+
+```rust
+fn main() {
+    let t: (i32, bool, f64) = (32, true, 3.14);
+}
+```
