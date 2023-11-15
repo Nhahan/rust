@@ -150,3 +150,15 @@ fn main() {
 
 - Rust의 배열은 길이가 고정이다. 크기가 가변적인 배열을 원한다면 벡터를 사용해야 한다.
 
+## 함수 Functions
+
+```rust
+fn main() {
+    println!("Hello, world!");
+    another_function();
+}
+
+fn another_function() {
+    println!("Another function.");
+}
+```
