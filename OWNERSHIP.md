@@ -24,3 +24,22 @@ fn main() {
 - 즉, 컴파일 시점에 미리 크기를 알 수 없음
 - 그러므로 힙 heap 메모리에 저장
 
+## 문자열 리터럴 값으로부터 String 값 만들기
+
+```rust
+fn main() {
+    let s = String::from("hello"); // String::from 함수 사용
+    println!("{}, world!", s);
+}
+```
+
+### 메모리의 소유권
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1; // s1의 메모리 소유권이 s2로 이동
+    println!("{s2}, world!");
+    // println!("{s1}, world!"); // s1의 메모리 소유권은 박탈되었으므로 컴파일 에러
+}
+```
