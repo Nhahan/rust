@@ -54,3 +54,17 @@ fn main() {
     println!("{s2}, world!");
 }
 ```
+
+## 함수 호출시 소유권 이동
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    string_length(s);
+    // println!("{s}, world!"); // 소유권이 string_length() 함수로 넘어갔으므로 컴파일 에러
+}
+
+fn string_length(s: String) {
+    println!("The length of '{}' is {}.", s, s.len());
+}
+```
