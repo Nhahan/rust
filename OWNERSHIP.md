@@ -43,3 +43,14 @@ fn main() {
     // println!("{s1}, world!"); // s1의 메모리 소유권은 박탈되었으므로 컴파일 에러
 }
 ```
+
+### 새로운 메모리 할당
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1.clone(); // s1의 메모리를 복제하여 s2에 할당
+    println!("{s1}, world!");
+    println!("{s2}, world!");
+}
+```
