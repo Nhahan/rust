@@ -162,3 +162,17 @@ fn another_function() {
     println!("Another function.");
 }
 ```
+
+## if
+
+```rust
+fn main() {
+    let number = 3;
+
+    if number % 2 == 0 {
+        println!("짝수입니다.");
+    } else {
+        println!("홀수입니다.");
+    }
+}
+```
