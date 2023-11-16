@@ -205,3 +205,28 @@ fn main() {
     println!("The result is {}", result);
 }
 ```
+
+## while
+
+```rust
+fn main() {
+    let mut number = 0;
+
+    while number != 10 {
+        println!("number = {}", number);
+        number += 1;
+    }
+}
+```
+
+## for
+
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {}", element);
+    }
+}
+```
