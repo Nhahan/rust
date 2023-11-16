@@ -68,3 +68,18 @@ fn string_length(s: String) {
     println!("The length of '{}' is {}.", s, s.len());
 }
 ```
+
+## 함수 반환값의 소유권 이동
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = string_length(s1);
+    println!("s2 = {}", s2);
+}
+
+fn string_length(s: String) -> String {
+    println!("The length of '{}' is {}.", s, s.len());
+    s // 반환값의 소유권을 호출한 함수로 이동
+}
+```
