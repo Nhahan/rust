@@ -101,3 +101,38 @@ fn calc_length(s: &String) -> usize {
     length
 }
 ```
+
+## 참조는 기본적으로 immnutable
+
+```rust
+// 불가능
+fn main() {
+    let mut s = String::from("헬로");
+    
+    append_word(&s); 
+    
+    println!("s = {}", s);
+}
+
+fn append_word(s: &String) {
+    s.push_str(", 월드"); // 불가능
+}
+```
+
+## 변경 가능한 참조 mutable reference
+
+```rust
+fn main() {
+    let mut s = String::from("헬로");
+    
+    append_word(&mut s); 
+    
+    println!("s = {}", s);
+}
+
+fn append_word(s: &mut String) {
+    s.push_str(", 월드");
+}
+```
+
+- `mut`을 명시해주어야 변경이 가능해진다.
