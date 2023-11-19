@@ -83,3 +83,21 @@ fn string_length(s: String) -> String {
     s // 반환값의 소유권을 호출한 함수로 이동
 }
 ```
+
+## 소유권 임대
+
+```rust
+fn main() {
+    let s = String:: from("헬로");
+    
+    let len = calc_length(&s);
+    
+    println!("{}의 길이는 {}입니다.", s, len);
+}
+
+fn calc_length(s: &String) -> usize {
+    let length = s.len();
+    
+    length
+}
+```
