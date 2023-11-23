@@ -142,3 +142,16 @@ fn append_word(s: &mut String) {
 
 - 어떤 모음에 있는 (일부) 연속된 요소들을 참조하는 방법
 - 참조와 마찬가지로 소유권을 넘기지는 않음
+
+```rust
+fn main() {
+    let s = String::from("헬로 월드;");
+    
+    let len = s.len();
+    let hello = &s[0..6]; // let hello = &s[..6]; 와 같음
+    let world = &s[7..len]; // let world = &s[7..];
+    let all = &s[..];
+    
+    println("hello = {}, world = {}", hello, world);
+}
+```
