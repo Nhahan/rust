@@ -25,4 +25,7 @@ fn main() {
     user2.name = String::from("Park");
 
     println("유저 이름: {}", user2.name); // Park
+
+    let user3 = {...user2};
+}
 ```
