@@ -2,17 +2,27 @@
 
 ```rust
 struct User {
-    username: String,
+    name: String,
     email: String,
     active: bool,
 }
 
 fn main() {
-    let user1 = User {
-        username: String::from("hong"),
+    let user = User {
+        name: String::from("Hong"),
         email: String::from("gildong@example.com"),
         active: true,
     };
     
-    println("유저 이름: {}", user.username);
+    println("유저 이름: {}", user.name); // Hong
+
+    let mut user2 = User {
+        name: String::from("Kim"),
+        email: String::from("hello@example.com"),
+        active: true,
+    };
+
+    user2.name = String::from("Park");
+
+    println("유저 이름: {}", user2.name); // Park
 ```
