@@ -30,3 +30,25 @@ fn main() {
 }
 ```
 
+## 구조체 Struct 예제
+
+```rust
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+fn main() {
+    let rect = Rectangle {
+        width: 20,
+        height: 30,
+    };
+    
+    prntln!("사각형의 면적은 {}", area(*rect));
+}
+
+fn area(rect: &Rectangle) -> u32 {
+    rect.width * rect.height
+    
+}
+```
