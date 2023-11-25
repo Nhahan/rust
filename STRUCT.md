@@ -26,6 +26,7 @@ fn main() {
 
     println("유저 이름: {}", user2.name); // Park
 
-    let user3 = {...user2};
+    let user3 = {...user2}; // spread 사용 가능
 }
 ```
+
