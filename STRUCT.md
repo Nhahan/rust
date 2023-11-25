@@ -48,6 +48,7 @@ fn main() {
     prntln!("사각형의 면적은 {}", area(*rect));
     
     println!("Debug / 사각형: {:?}", rect);
+    dbg!(rect);
 }
 
 fn area(rect: &Rectangle) -> u32 {
