@@ -33,6 +33,7 @@ fn main() {
 ## 구조체 Struct 예제
 
 ```rust
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
@@ -45,6 +46,8 @@ fn main() {
     };
     
     prntln!("사각형의 면적은 {}", area(*rect));
+    
+    println!("Debug / 사각형: {:?}", rect);
 }
 
 fn area(rect: &Rectangle) -> u32 {
