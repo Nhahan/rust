@@ -29,3 +29,24 @@ fn main() {
     println!("some_string: {:?}", some_string);
 }
 ```
+
+## Enum 패턴 매칭
+
+```rust
+#[derive(Debug)]
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
+struct RGB(u8, u8, u8);
+
+fn color_to_rgb(color: Color) -> RGB {
+    match color {
+        Color::Red => RGB(255, 0, 0),
+        Color::Green => RGB(0, 255, 0),
+        Color::Blue => RGB(0, 0, 255),
+    }
+}
+```
