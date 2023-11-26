@@ -50,3 +50,22 @@ fn color_to_rgb(color: Color) -> RGB {
     }
 }
 ```
+
+```rust
+fn increment(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+
+fn main() {
+    let five = Some(5);
+    let six = increment(five);
+    let none = increment(None);
+    
+    println!("five: {:?}", five);
+    println!("six: {:?}", six);
+    println!("none: {:?}", none);
+}
+```
