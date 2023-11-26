@@ -56,3 +56,29 @@ fn area(rect: &Rectangle) -> u32 {
     
 }
 ```
+
+## 메소드 Method
+
+```rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let rect = Rectangle {
+        width: 20,
+        height: 30,
+    };
+    
+    println!("사각형의 면적은 {}", rect.area());
+}
+```   
+
