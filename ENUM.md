@@ -17,3 +17,15 @@ fn main() {
     println!("red == red => {}", red == Color::Red); // true
 }
 ```
+
+## Option
+
+```rust
+fn main() {
+    let some_number: Option<i32> = Some(5);
+    let some_string: Option<&str> = Some("a string");
+    
+    println!("some_number: {:?}", some_number);
+    println!("some_string: {:?}", some_string);
+}
+```
