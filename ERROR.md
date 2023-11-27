@@ -32,3 +32,19 @@ fn main() {
     };
 }
 ```
+
+## 에러 전파
+
+```rust
+use std::io;
+use std::fs::File;
+use std::io::Read;
+
+fn read_username() -> Result<String, io::Error> {
+    let mut username = String::new();
+
+    File::open("hello.txt")?.read_to_string(&mut username)?;
+
+    Ok(username)
+}
+```
