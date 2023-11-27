@@ -15,3 +15,20 @@ fn main() {
     };
 }
 ```
+
+```rust
+fn main() {
+    let f = File::open("hello.txt");
+
+    let f = match f {
+        Ok(file) => file,
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => match File::create("hello.txt") {
+                Ok(fc) => fc,
+                Err(e) => panic!("파일 생성 실패: {:?}", e),
+            },
+            other_error => panic!("파일 열기 실패: {:?}", other_error),
+        },
+    };
+}
+```
