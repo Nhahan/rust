@@ -28,4 +28,11 @@ fn main() {
     let p2: Point<f64> = Point { x: 1.0, y: 4.0 };
     println!("p1 = {:?}, p2 = {:?}", p1, p2);
 }
+
+// Method with Generic
+impl<T> Point<T> {
+    fn x(&self) -> &T {
+        &self.x
+    }
+}
 ```
