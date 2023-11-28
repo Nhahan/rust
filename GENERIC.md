@@ -36,3 +36,52 @@ impl<T> Point<T> {
     }
 }
 ```
+
+## Traits
+
+```rust
+trait Greet {
+    fn greet(&self) -> String;
+}
+
+enum Pet {
+    Cat,
+    Dog,
+    Tiger,
+}
+
+impl Greet for Pet {
+    fn greet(&self) -> String {
+        match self {
+            Pet::Cat => String::from("Meow!"),
+            Pet::Dog => String::from("Woof!"),
+            Pet::Tiger => String::from("Roar!"),
+        }
+    }
+}
+
+struct Person {
+    name: String,
+}
+
+impl Greet for Person {
+    fn greet(&self) -> String {
+        format!("Hello, my name is {}", self.name)
+    }
+}
+
+fn meet(one: &impl Greet, another: &impl Greet) {
+    println!("{}", one.greet());
+    println!("{}", another.greet());
+}
+
+fn main() {
+    let cat = Pet::Cat;
+    let gildong = Person {
+        name: String::from("Gildong"),
+    };
+    
+    meet(&cat, &gildong);
+    meet(&gildong, &cat);
+}
+```
