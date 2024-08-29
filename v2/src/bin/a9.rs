@@ -5,6 +5,7 @@ fn coordinate() -> (i32, i32) {
 }
 
 fn main() {
+    // destructuring
     let (x, y) = coordinate();
 
     if y > 5 {
