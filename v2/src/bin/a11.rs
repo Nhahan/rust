@@ -5,11 +5,11 @@ struct GroceryItem {
     id: i32
 }
 
-fn display_quantity(item: &GroceryItem) {
+fn display_quantity(item: GroceryItem) {
     println!("Quantity: {:?}", item.quantity);
 }
 
-fn display_id(item: &GroceryItem) {
+fn display_id(item: GroceryItem) {
     println!("ID: {:?}", item.id);
 }
 
@@ -19,5 +19,25 @@ fn main() {
         id: 1
     };
     display_quantity(&item);
-    display_id(&item);
+    display_id(item);
 }
+
+
+
+// wrong usage
+// fn display_quantity(item: GroceryItem) {
+//     println!("Quantity: {:?}", item.quantity);
+// }
+//
+// fn display_id(item: GroceryItem) {
+//     println!("ID: {:?}", item.id);
+// }
+//
+// fn main() {
+//     let item = GroceryItem {
+//         quantity: 5,
+//         id: 1
+//     };
+//     display_quantity(&item);
+//     display_id(item);
+// }
