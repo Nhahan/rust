@@ -41,7 +41,7 @@ fn print_access(employee: &Employee) -> Result<(), String> {
 
 fn main() {
     let manager = Employee {
-        position: Position::LineSupervisor,
+        position: Position::Manager,
         status: Status::Active,
     };
 
