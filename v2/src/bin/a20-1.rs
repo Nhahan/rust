@@ -6,4 +6,4 @@ fn get_input() -> io::Result<String> {
     Ok(buffer.trim().to_string())
 }
 
-fn mani() {}
+fn main() {}
