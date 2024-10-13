@@ -1,5 +1,8 @@
 // Project: Interaction bill manager
 
+use std::io;
+use std::io::Read;
+
 struct Bill {
     name: String,
     amount: f64,
@@ -25,6 +28,16 @@ impl Bills {
     }
 }
 
-fn main() {
+fn get_input() -> String {
+    let mut buffer = String::new();
+    while io::stdin().read_line(&mut buffer).is_err() {
+        println!("Please enter your data again");
+    }
+    buffer.trim().to_string()
+}
 
+fn main() {
+    loop {
+
+    }
 }
